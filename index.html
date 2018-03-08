@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<script src="lib/requirejs/require.js" data-main="js/index"></script>
+</head>
+<body>
+	<header></header>
+	<div class="main">
+		<h1>商品列表</h1>
+		<div class="list"></div>
+		<script type="text/html" id="list_template">
+			{{each list as prod}}
+				<div class="prod">
+					<div class="id">{{prod.id}}</div>
+					<div class="title">{{prod.title}}</div>
+					<div class="price">{{prod.price}}</div>
+					<div class="img">{{prod.img}}</div>
+				</div>
+			{{/each}}
+		</script>
+	</div>
+	<footer></footer>
+</body>
+</html>

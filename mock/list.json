@@ -1,0 +1,12 @@
+{
+	"res_code":0,
+	"res_error":"",
+	"res_body":{
+		"data":[
+			{"id":1, "title":"商品1", "price": 999, "img":"xxx1.jpg"},
+			{"id":2, "title":"商品2", "price": 888, "img":"xxx2.jpg"},
+			{"id":3, "title":"商品3", "price": 666, "img":"xxx3.jpg"},
+			{"id":4, "title":"商品4", "price": 333, "img":"xxx4.jpg"}
+		]
+	}
+}
