@@ -1,70 +1,292 @@
-@charset "Utf-8";
-html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, input, h6, form, fieldset, legend, img, div { box-sizing: border-box; margin:0; padding:0;}
-
-fieldset, img { border:none; }
-
+@charset "utf-8";
+/*公共css样式*/
+html,body,div,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,fieldset,legend,img{margin: 0;padding: 0;}
+fieldset,img,input{border: none;}
 img{vertical-align: top;}
-
-em,i,strong,b{ font-style:normal; font-weight:normal; }
-
-ul, ol{ list-style:none; } 
-
-ul, li{list-style:none;} 
-
-a {text-decoration:none;}
-
-.ind{text-indent: 2em;}
-
-.noborder{border: none;}
-
-.nobg{background:none;}
-
-.floatL{float: left;}
-
-.floatR{float: right;}
+i,em,b,strong{font-style: normal; font-weight: normal;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
 .header_box{
-	width: 1350px;
-	margin: 0 auto;
+	height: 36px;
+	border: 1px solid #efefef;
 	.header{
-		width: 100%;
-		height: 36px;
-		.left{
-			width: 170px;
-			height: 36px;
-			float: left;
-			margin-left: 80px;
+		width: 1190px;
+		height: 100%;
+		margin: 0 auto;
+		border-left: 1px solid #efefef;
+		border-right: 1px solid #efefef;
+		font-size: 12px;
 			color: #9a9a9a;
+		a{
 			font-size: 12px;
-			border-left:1px solid #efefef;
-			display: flex;
-			justify-content: space-around;
-			align-items:center;
-			.left_1{
-				color: #ff6b00;
-				span{
 			color: #9a9a9a;
-
+		}
+		.left{
+			float: left;
+			padding: 0 8px;
+			div{
+				float: left;
+				padding: 8px;
+			}
+			.left_1{
+					a{
+					color: #fd6900;
+					}
 				}
+		}
+		.right{
+			float: right;
+			div{
+				float: left;
+				padding:8px 17px;
+				border-left: 1px solid #efefef;
+				border-right: 1px solid #efefef; 
+			}
+			:nth-child(1){
+				a{
+					color: #fa6c0a;
+				}
+			}
+			:nth-child(4){
+				padding-right: 20px;
+				background: url(../images/ico_arrow_down.png) no-repeat 119px 15px;
+			}
+			:nth-child(8){
+				padding-right: 20px;
+
+				background: url(../images/ico_arrow_down.png) no-repeat 62px 15px;
+				
+			}
+		}
+	}
+}
+.header_footer{
+	height: 100px;
+	.footer_content{
+		width: 1190px;
+		height: 100%;
+		margin: 0 auto;
+		.left{
+			width: 401px;
+			float: left;
+			padding:28px 0; 
+			div{
+				float: left;
+			}
+			.logo{
+				a{	
+					display: block;
+					width: 137px;
+					height: 43px;
+					background: url(../images/sprite_common.png) no-repeat 0px -39px;
+				}
+			}
+			.huoyuan{
+
 			}
 		}
 		.right{
-			width: 805px;
-			height: 100%;
+			width: 600px;
+			height: 60px;
+			margin-top: 12px;
 			float: right;
-			margin-right: 80px;
-			display: flex;
-			color: #9a9a9a;
 			font-size: 12px;
-			justify-content: space-around;
-			align-items: center;
-			:nth-child(1){
-				color: #fd6900;
-			}
-			:nth-child(4){
-				background: url("images/footer_arrow_icons.png");
-				span{
-					color: black;
+			.right_top{
+				width: 100%;
+				height: 30px;
+				color: #fb6c04;
+				div{
+					float: left;
+					 
+					a{
+						display: block;
+						padding:8px;
+						color: #fa6c0a;
+					}
 				}
+				a:hover{
+					background-color: #fa6c0a;
+					color: white;
+				}
+			}
+			.right_bottom{
+				width: 100%;
+				height: 30px;
+				.bottom_1{
+					float: left;
+					width: 493px;
+					height: 30px;
+					.text{
+						width: 400px;
+						height: 30px;
+						padding-left: 30px;
+						float: left;
+						border: 2px solid #ff6e01;
+						font-size: 12px;
+						color: #e1e1e1;
+						outline: none;
+						background: url(../images/sousuo.png) no-repeat 10px center;
+					}
+					.btn{
+						width: 55px;
+						height: 36px;
+						background-color:#ff6e01;
+						outline: none;
+						color: white;
+						cursor: pointer;
+					}
+				}
+				.bottom_2{
+					float: right;
+					width: 90px;
+					height: 34px;
+					border: 1px solid #ccc;
+					margin-right: 8px;
+					line-height: 34px;
+					text-align: center;
+					a{
+					color: #656d62;
+					}
+				}
+			}
+		}
+	}
+}
+.nav_box{
+	height: 48px;
+	background-color: black;
+	.nav{
+		width: 1190px;
+		height: 48px;
+		margin:0 auto;
+		.nav_left{
+			height: 48px;
+			line-height: 48px;
+			float: left;
+			li{
+				float: left;
+				background: url(../images/line.png) no-repeat left center;
+				a{	
+					display: block;
+					padding:0 20px;
+					font-size: 14px; 
+					color: white;
+					font-weight: bolder;
+				}
+				a:hover{
+				color: #ff6d00;
+				}
+			}
+			li:nth-child(1){
+				
+				background-image: none;
+				background: url(../images/shouye.png) no-repeat 14px center;
+				background-color: #ff6d00;
+				padding-left: 16px;
+				a:hover{
+					color: white;
+				}
+			}
+			li:nth-child(2){
+				background-image: none;
+			}
+			li:nth-child(4){
+				a{
+				padding-left: 30px;
+				background: url(../images/shili.png) no-repeat 8px center;
+				}
+			}
+
+		}
+		.nav_right{
+			height: 48px;
+			line-height: 48px;
+			float: right;
+			a{	
+				font-size: 12px;
+				color: #e3e3e3;
+			}
+			a:hover{
+				color: #ff6d00;
+			}
+		}
+	}
+}
+.xinkuan_box{
+	height: 38px;
+	background-color: #f6f6f6;
+	border: 1px solid #e6e6e6;
+	.xinkuan{
+		width: 1190px;
+		margin: 0 auto;
+		.xinkuan_left{
+			height: 38px;
+			line-height: 38px;
+			float: left;
+			li{
+				float: left;
+				background: url(../images/line1.png) no-repeat left center;
+				a{	
+					display:block;
+					padding: 0 10px; 
+					font-size: 12px;
+					color: #686d69;
+				}
+				a:hover{
+					color: #ff6d00;
+				}
+			}
+			li:nth-child(1){
+				background-image: none;
+			}
+			li:nth-child(4){
+				position: relative;
+				a{	
+					padding-left: 20px;
+					background: url(../images/video_bo.png) no-repeat 1px center;
+					background-size: 20px 20px;
+					}
+					img{
+						width: 35px;
+						height: 35px;
+						position: absolute;
+						top: -10px;
+						left: 60px;
+					}
+			}
+			li:nth-child(6){
+				a{
+					padding-left: 20px;
+					background: url(../images/gold_icon.png) no-repeat 1px center;
+					background-size: 20px 20px;
+					}
+			}
+			li:nth-child(7){
+				a{	
+					padding-left: 20px;
+					background: url(../images/lighting.png) no-repeat 1px center;
+					background-size: 20px 20px;
+
+					}
+			}
+			li:nth-child(8){
+				a{	
+					padding-left: 20px;
+					background-size: 20px 20px;
+					background: url(../images/leather_logo.png) no-repeat 1px center;
+					color: #ff6d00;
+				}
+			}
+		}
+		.xinkuan_right{
+			height: 38px;
+			line-height: 38px;
+			float: right;
+			a{
+				color:#cc0004;
+			}
+			a:hover{
+				color: #ff6d00;
 			}
 		}
 	}
