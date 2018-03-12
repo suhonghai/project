@@ -1,0 +1,177 @@
+@charset "utf-8";
+/*公共css样式*/
+html,body,div,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,fieldset,legend,img{margin: 0;padding: 0;}
+fieldset,img,input{border: none;}
+img{vertical-align: top;}
+i,em,b,strong{font-style: normal; font-weight: normal;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+.header{
+	height: 37px;
+	background-color: #f3f3f3;
+	.header_content{
+		width: 1190px;
+		height: 37px;
+		margin: 0 auto;
+		.nav{
+			width: 430px;
+			height: 37px;
+			float: right;
+			margin-right: 10px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			li{
+				padding: 5px;
+				border-left: 1px solid #e6e6e6;
+				a{
+					font-size: 12px;
+					color: #9d819d;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+.logo{
+	width: 1190px;
+	height: 110px;
+	margin: 0 auto;
+}
+.register_header{
+	width: 1190px;
+	height: 65px;
+	margin: 0 auto;
+	border-bottom: 1px solid #c4c4c4;
+	overflow: hidden;
+	.header_left{
+		float: left;
+		width: 430px;
+		height: 65px;
+		margin-left: 40px;
+		li{
+			width: 117px;
+			height: 40px;
+			text-align: center;
+			line-height: 45px;
+			margin-top:23px;
+			float: left;
+			border: 1px solid #c4c4c4;
+			border-bottom: none;
+			margin-right: 15px;
+			background-color: #f6f6f6;
+			a{
+				font-size: 12px;
+				color: #4b4b4b;
+				padding: 7px 25px;
+			}
+		}
+		li:hover{
+			a{
+				color: #ff6c00;
+				border-bottom:3px solid #ff6c00; 
+			}
+		}
+	}
+	.header_right{
+		width: 156px;
+		height: 65px;
+		float: right;
+		font-size: 12px;
+		line-height: 70px;
+	}
+}
+.news{
+	height: 600px;
+	.news_content{
+		width: 1190px;
+		height: 600px;
+		border: 1px solid #c4c4c4;
+		border-top:none; 
+		margin:0 auto;
+		.news_left{
+			width: 750px;
+			height: 600px;
+			border-right: 1px solid #c4c4c4;
+			padding-top: 30px;
+			float: left;
+			box-sizing: border-box;
+			.username, .password, .confirmpas, .phone{
+				height: 38px;
+				font-size: 12px;
+				color: #9c9c9c;
+				margin: 17px;
+				span{
+					display: inline-block;
+					width: 100px;
+					height: 38px;
+					line-height: 38px;
+					text-align: right;
+				}
+				input{
+					width: 270px;
+					height: 35px;
+					border: 1px solid #c4c4c4;
+					float: right;
+					margin-right: 263px;
+				}
+			}
+
+			.btn{
+				width: 135px;
+				height: 45px;
+				margin-left: 200px;
+				input{
+					width: 135px;
+					height: 45px;
+					border-radius: 5px;
+					background-color: #ff7e00;
+				}
+			}
+		}
+		.news_right{
+			float: right;
+			a{
+				display: block;
+				margin-right: 30px;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+.footer{
+	height: 160px;
+	.footer_content{
+		width: 1164px;
+		height: 160px;
+		margin: 0 auto;
+		line-height: 160px;
+		text-align: center;
+		font-size: 12px;
+		color: #989898;
+		p{
+			.fuwu{
+				color: #7c7c7c;
+			}
+			button{
+				width: 92px;
+				height: 22px;
+			}
+			.btn1{
+				background: url(../images/qq-md.png) no-repeat 1px 1px;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				display: inline-block;
+			}
+			.btn2{
+				border: none;
+				background: url(../images/mail.png) no-repeat 1px 1px;
+				outline: none;
+				cursor: pointer;
+				display: inline-block;
+				
+			}
+		}
+	}
+}

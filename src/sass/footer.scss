@@ -1,8 +1,130 @@
 .footer_top_box{
 	height: 250px;
+	background-color: #393939;
+	color: #9b9b9b;
 	.footer_top{
 		width: 1190px;
-		height: 250px;
+		height: 200px;
 		margin:0 auto;
+		.left{
+			float: left;
+			width: 217px;
+			height: 186px;
+			.left_logo{
+				width: 164px;
+				height: 39px;
+				margin-top: 50px;
+				margin-left: 30px;
+				background: url(../images/sprite_common.png) no-repeat 4px 0px;
+			}
+			.left_bottom{
+				text-align: center;
+				a{
+					display: inline-block;
+					padding:5px; 
+					color: #9b9b9b;
+				}
+			}
+		}
+		.right{
+			float: right;
+			width: 970px;
+			height: 200px;
+			padding: 20px 0;
+			box-sizing: border-box;
+			li{
+				width: 160px;
+				height: 140px;
+				float: left;
+				border-left:1px solid  #515151;
+				padding-left:28px;
+				box-sizing: border-box;  
+				h3{
+					font-size: 12px;
+					color: #b3b3b3;
+				}
+				a{
+					color: #9b9b9b;
+					display: block;
+					padding: 5px 0;
+					font-size: 12px;
+				}
+			}
+			li:nth-child(5){
+				width: 236px;
+				i{
+					a{
+						display: inline-block;
+						padding-right: 20px; 
+					}
+				}
+			}
+		}
 	}
+	.footer_bottom{
+		width: 1190px;
+		border: 1px solid #3f3f3f;
+		position: relative;
+		.bottom_content{
+			width: 1100px;
+			margin: 0 auto; 
+			li{
+				float: left;
+				font-size: 12px;
+				color: #979797;
+				padding: 12px 7px 7px 7px;
+				background: url(../images/line2.png) no-repeat right 15px;
+				a{
+					font-size: 13px;
+					color: #a0a0a0;
+				}
+			}
+		}
+		.fix{
+			position:absolute;
+			top: 13px;
+			right: 10px;
+		}
+	}
+}
+
+.footer_bottom_box{
+	height: 135px;
+	background-color: #d6d6d6;
+	.footer_bottom{
+		width: 1190px;
+		margin: 0 auto;
+		.bottom_content{
+			width: 1190px;
+			height: 60px;
+			line-height: 60px;
+			padding: 0 280px;
+			box-sizing: border-box;
+			li{
+				height: 60px;
+				float: left;
+				padding:0 20px;
+				background: url(../images/line2.png) no-repeat right center;
+				a{
+					color: #999999;
+					font-size: 12px;
+				}
+			}
+		}
+	.footer_footer{
+			width: 1190px;
+			color: #7e7e7e;
+			text-align: center;
+			font-size: 12px;
+			p{
+				span{
+					color: #b2b1b7;
+				}
+			}
+			a{
+			color: #7e7e7e;
+			}
+		}
+	}
+	
 }
