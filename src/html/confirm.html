@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>确认页面 </title>
+	<link rel="stylesheet" href="../css/confirm.css">
+	<script src="../lib/requirejs/require.js" data-main="../js/confirm"></script>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="main_content">
+			<div class="left">
+				<img src="../images/cart_left.jpg" alt="">
+			</div>
+			<div class="right">
+				<!-- <div class="right_header">
+					<ul class="nav">
+						<li><a href="#">全部（0）</a></li>
+						<li><a href="#">尾货（0）</a></li>
+						<li><a href="#">异常的（0）</a></li>
+					</ul>
+				</div> -->
+				<div class="right_main">
+					<!-- <div class="rmain_header">
+						<input type="checkbox" class="ck_all">全选
+						<a href="#">批量下载数据包</a>
+						<a href="#">批量删除</a>
+						<div class="total">总价：<span>没有钱</span></div>
+						<div class="pay">去结算</div>
+					</div> -->
+					<div class="rmain_content">
+						<script type="text/html" id="cart">
+					    	{{each products as prod}}
+					    		<div class="cart_template">
+									<!-- <input type="checkbox" class="ck_prod"> -->
+									<div class="img"><img src="{{prod.img}}" alt=""></div>
+									<div class="xinxi">
+										<div class="brand">{{prod.number}}</div>
+										<div class="amopunt"></div>
+										<div class="phone">电话：18208170178</div>
+										<div class="qq">QQ：281815019<a href="#">联系商家</a></div>
+										<div class="dizhi">地址：国际商贸城3区2楼连廊15街20586号</div>
+									</div>
+									<div class="zhuangtai">正常</div>
+									<div class="price"><span>拿货价:</span><i class="i1">￥{{prod.price}}</i></div>
+									<div class="lingshou"><span>数量</span><div class="input_amount">{{prod.amount}}</div><!-- <input type="text" style="width: 30px; height: 20px; text-align: center;" name="" value="{{prod.amount}}" class="input_amount"> --></div>
+									<div class="lilv"><span>总和</span><i class="i2">{{prod.amount*prod.price}}</i></div>
+									<div class="fabu">
+										<a href="#">淘宝发布</a>
+										<a href="#">下载数据包</a>
+										<a href="#">更多发布</a>
+										<div class="yichu"><img src="../images/remove.png" alt="移出进货单"></div>
+									</div>
+								</div>
+					    	{{/each}}
+					    </script>
+
+					</div>
+					<div class="addres">
+						<div class="shoujianren">
+							<h3>收件人信息</h3>
+							<span>注意：</span>
+							<i>:收件地址请按省/市/县详细填写以便准确计算快递费，否则以最低标准计算</i>
+						</div>
+						<div class="dizhi">
+							<span>收件地址匹配</span>
+							<input type="text" value="将淘宝订单中的收件地址直接复制粘贴到此处，如：张三，17828173307，四川省 成都市 高新区 国际商贸城3区2楼12836X号">
+						</div>
+						<div class="totalxinxi">
+							<div class="shoujianren">
+								<span>收件人</span>
+								<input type="text">
+							</div>
+							<div class="dianhau">
+								<span>电话</span>
+								<input type="text">
+							</div>
+							<div class="shoujiandizhi">
+								<span>收件地址</span>
+								<input type="text">
+							</div>
+							<div class="beizhu">
+								<span>订单备注</span>
+								<input type="text">
+							</div>
+							<div class="totalmoney">
+								<div class="sum"></div>
+								<div class="paytotal">提交并支付</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>

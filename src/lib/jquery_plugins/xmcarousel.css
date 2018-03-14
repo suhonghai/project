@@ -14,6 +14,7 @@
 	display: none;
 }
 .xmcarousel .pages {
+	display: none;
 	height: 30px;
 	position: absolute;
 	bottom: 0;
@@ -33,6 +34,7 @@
 }
 
 .xmcarousel .prev, .xmcarousel .next {
+	display: none;
 	width: 45px;
 	height: 100px;
 	background: #000;

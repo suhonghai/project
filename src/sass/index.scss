@@ -15,7 +15,6 @@
 			width: 241px;
 			height: 135px;
 			float: right;
-			background-color: green;
 		}
 	}
 
@@ -132,8 +131,7 @@
 	height: 640px;
 	.gg_content{
 		width: 1190px;
-		height: 640px;
-		border: 1px solid red;
+		height: 642px;
 		margin:0 auto;
 		span{
 			display: block;
@@ -143,10 +141,15 @@
 			color: #ededed;
 		}
 		.main_content{
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			align-items: baseline;
 			.prod1{
-				width: 190px;
+				width: 195px;
 				height: 290px;
 				position: relative;
+				box-sizing: border-box;
 				border: 1px solid #fafafa;
 				.tuijian{
 					position: absolute;
@@ -199,7 +202,7 @@
 					}
 				}
 			}
-			.prod:hover{
+			.prod1:hover{
 				border: 2px solid #fe6c00;
 			}
 		}
@@ -214,7 +217,7 @@
 		margin: 0 auto;
 		.zzhead{
 			width: 1190px;
-			height: 32px;
+			height: 35px;
 			border-bottom:3px solid #51b8c7; 
 			i{
 				font-size: 14px;
@@ -243,10 +246,12 @@
 		.shili_content{
 			width: 1190px;
 			height: 612px;
-			background-color: green;
+			display: flex;
+			flex-wrap: wrap;
 			.prod2{
 				width: 190px;
-				height: 310px;
+				height: 300px;
+				box-sizing: border-box;
 				position: relative;
 				.tuijian{
 					position: absolute;
@@ -345,7 +350,10 @@
 		.yshy_content{
 			width: 1190px;
 			height: 4214px;
-			background-color: yellow;
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			flex-wrap: wrap;
 			.prod3{
 				width: 192px;
 				height: 291px;
@@ -438,10 +446,12 @@
 				font-size: 12px;
 				line-height: 26px;
 			}
-		.ycd_content{
+		.ycd_content1{
 			width: 1190px;
 			height: 1523px;
-			background-color: yellow;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
 			.prod4{
 				width: 192px;
 				height: 291px;
@@ -537,7 +547,6 @@
 		.cai_footer{
 			width: 1190;
 			height: 473px;
-			background-color: red;
 		}
 	}
 }

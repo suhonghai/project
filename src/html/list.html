@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list页面</title>
+	<link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="main">
+			<div class="main1">
+				<ul>
+					<li><a href="#">综合</a></li>
+					<li><a href="#">网红新款</a></li>
+					<li><a href="#">热门资源</a></li>
+				</ul>
+			</div>
+			<div class="main2">
+				<ul>
+					<li><span>价位：</span></li>
+					<li><a href="#">全部</a></li>
+					<li><a href="#">1-80</a></li>
+					<li><a href="#">81-180</a></li>
+					<li><a href="#">181以上</a></li>
+				</ul>
+			</div>
+			<div class="main3">
+				<ul>
+					<li><span>风格：</span></li>
+					<li><a href="#">甜美</a></li>
+					<li><a href="#">欧美</a></li>
+					<li><a href="#">休闲</a></li>
+					<li><a href="#">民族风</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container" class="main_content">
+			<script type="text/html" id="prod5">
+				{{each products as prod}}
+					<div class="prod">
+						<div class="img">
+							<img src="{{prod.img}}" alt="{{prod.title}}">
+							<div class="price">￥{{prod.price}}</div>
+						</div>
+						<div class="number">{{prod.number}}</div>
+						<div class="produce">{{prod.produce}}</div>
+						<div class="footer">
+							<div class="cart">加入进货单</div>
+							<div class="renqi">人气&nbsp;&nbsp;&nbsp;&nbsp;(122)</div>
+						</div>
+					</div>
+				{{/each}}
+			</script>
+			<!-- <script type="text/javascript">
+				var height, spacing, boxWidth;
+
+				window.onload = function(){
+					let containerWidth = document.getElementById("container").clientWidth - 17,
+						imgBoxes = document.getElementsByClassName(".prod, #container");
+						console.log(containerWidth);
+						console.log(imgBoxes);
+					boxWidth = imgBoxes[0].offsetWidth;
+					let cols = Math.floor(containerWidth / boxWidth);
+					spacing = (containerWidth - cols * boxWidth) / (cols + 1);
+					height = new Array(cols);
+
+					height.fill(0);
+					
+					// 最短列
+					Array.from(imgBoxes).forEach(function(curr){
+						let index = height.indexOf(Math.min.apply(null, height));
+						curr.style.left = (index + 1) * spacing + index * boxWidth + "px";
+						curr.style.top = height[index] + 10 + "px";
+						height[index] += curr.offsetHeight + 10;
+					});
+
+					document.getElementById("container").style.height = Math.max.apply(null, height) + 10 + "px";
+				}
+			</script> -->
+		</div>
+	</main>
+	<footer></footer>
+	<script src="../lib/requirejs/require.js" data-main ="../js/list"></script>
+</body>
+</html>
