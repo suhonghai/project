@@ -23,8 +23,8 @@ define(["jquery", "cookie"], function() {
 		/* 查询是否有登录用户 */
 		$.cookie.json = true;
 		let user = $.cookie("loginUser");
-		if (user && user.firstname !== undefined){
-			$(".left_1 .login").html(`<a href="/html/user.html" style="padding:9px;">欢迎${user.firstname}</a>`);
+		if (user && user.username !== undefined){
+			$(".left_1 .login").html(`<a href="/html/user.html" style="padding:9px;">欢迎${user.username}</a>`);
 			$(".left_2, .left_3").css({display:"none"});
 			$(".left_1 a").hover(function(){
 				$(".zhuxiao").show();

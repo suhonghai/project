@@ -9,8 +9,12 @@ require(["config"], function(){
 		});
 		//提交表单到后台
 		$(function(){
+
 			$(".login_form").submit(function(){
-				$.post("http://localhost/demo_Practice/php/login.php", $(this).serialize(), function(data){
+
+
+				if($("#yanzheng").val()){
+					$.post("http://localhost/demo_Practice1/php/login.php", $(this).serialize(), function(data){
 					if(data.res_code === 0){
 						//保存登录成功的信息到cookie中
 						$.cookie.json = true;//自动调用JSON.stringfly(),JSON.parse()来转换json值
@@ -21,6 +25,12 @@ require(["config"], function(){
 						alert("用户名或密码错误");
 					}
 				},"json");
+				
+				}
+				else{
+					alert("请输入验证码。。。");
+				}
+				
 				return false;
 			});
 		});

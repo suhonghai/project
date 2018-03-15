@@ -4,7 +4,7 @@ require(["config"], function(){
 			// 验证注册的邮箱是否被占用
 			let isExist = true;
 			$(".news_left :text[name='email']").blur(function(){
-				$.getJSON("http://localhost/demo_Practice/php/check.php", {email: $(this).val()}, function(data){
+				$.getJSON("http://localhost/demo_Practice1/php/check.php", {email: $(this).val()}, function(data){
 					if(data.res_body.status === 0){
 						isExist = false;
 						$(".email_info").text("邮箱可用");
@@ -20,7 +20,7 @@ require(["config"], function(){
 				if(!isExist){//邮箱为被占用则提交注册信息
 					$.ajax({
 						type: "post",
-						url: "http://localhost/demo_Practice/php/register.php",
+						url: "http://localhost/demo_Practice1/php/register.php",
 						data: $(this).serialize(),
 						dataType: "json",
 						success:function(data){

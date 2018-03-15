@@ -32,7 +32,7 @@
 			</div>
 			<form class="login_form">
 				<div class="input1">
-					<input type="text" name="email" placeholder="请输入用户名">
+					<input type="text" name="email" placeholder="请输入邮箱">
 				</div>
 				<div class="input2">
 					<input type="password" name="password" placeholder="请输入密码">
@@ -56,7 +56,14 @@
 				return "rgb( "+ r + "," + g + "," + b +")";
 			}
 //			var a = randomColor(0,255);console.log(a);
-			drawPic();
+			let retur = drawPic();
+			console.log(retur);
+			document.getElementById("yanzheng").onblur = function(){
+				if(document.getElementById("yanzheng").value !== retur){
+					alert("验证码错误");
+				}
+			}
+
 			function drawPic(){
 				var canvas = document.getElementById("canvas");
 				var ctx = canvas.getContext("2d");
@@ -69,8 +76,10 @@
 				ctx.fillRect(0,0,width,height);
 				
 				var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+				let number = "";
 				for(var i = 0;i < 4;i++){
 					var txt = str[randomNum(0,str.length)];
+					number +=txt;
 					ctx.fillStyle = randomColor(50,160);
 					ctx.font = randomNum(15,40) + "px  SimHei";
 					var x  = 10+i*25;
@@ -98,6 +107,7 @@
 					ctx.arc(randomNum(0,width),randomNum(0,height),1,0,2*Math.PI);
 					ctx.fill();
 				}
+				return number;
 			}
 		</script>
 

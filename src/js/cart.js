@@ -73,6 +73,19 @@ require(["config"], function(){
 					//计算合计
 					calcTotal();
 				});
+				
+				$(".pay").on("click",function(){
+					
+					let confirm_prod= [];
+					$(".ck_prod:checked").parents(".cart_template").each(function(){
+						confirm_prod.push($(this).data("prod"));
+					});
+					// confirm_prod.push($(".total span").text());
+					// console.log(confirm_prod)
+					$.cookie.json = true;
+					$.cookie("confirmprod", confirm_prod,{expries:7, path:"/"});
+					location ="../html/confirm.html" ;
+				})
 				/*计算合计*/
 				function calcTotal(){
 					let total = 0;
@@ -82,9 +95,6 @@ require(["config"], function(){
 					total += "元";
 					$(".total span").text(total);
 				}
-				$(".pay").on("click",function(){
-					location ="../html/confirm.html" ;
-				})
 			});
 
 
