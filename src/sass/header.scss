@@ -24,15 +24,13 @@ a{text-decoration: none;}
 		.left{
 			float: left;
 			padding: 0 8px;
-			div{
+			.left_1, .left_2, .left_3{
 				float: left;
 				padding: 8px;
-			}
-			.left_1{
-					a{
+				a{
 					color: #fd6900;
-					}
 				}
+			}
 		}
 		.right{
 			float: right;

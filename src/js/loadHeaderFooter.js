@@ -23,8 +23,26 @@ define(["jquery", "cookie"], function() {
 		/* 查询是否有登录用户 */
 		$.cookie.json = true;
 		let user = $.cookie("loginUser");
-		if (user)
-			$(".left_1").html(`<a href="user.html">${user.firstname}</a>`);
+		if (user && user.firstname !== undefined){
+			$(".left_1 .login").html(`<a href="/html/user.html" style="padding:9px;">欢迎${user.firstname}</a>`);
+			$(".left_2, .left_3").css({display:"none"});
+			$(".left_1 a").hover(function(){
+				$(".zhuxiao").show();
+				$(".zhuxiao").hover(function(){
+					$(".zhuxiao").show();
+				},function(){
+					$(".zhuxiao").hide();
+				});
+			},function(){
+				$(".zhuxiao").hide();
+			});
+			$(".zhuxiao").on("click", function(){
+				let _date = +new Date() - 1;
+				$.cookie("loginUser",{expries:_date});
+				location = "/index.html";
+			});
+		}
+			
 	});
 	$("footer").load("/html/include/footer.html",function(){
 		

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<script src="../lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="../lib/jquery_plugins/jquery.elevateZoom-3.0.8.min.js"></script>
+</head>
+<body>
+	<img id="zoom_07" src="../images/small.jpg" data-zoom-image="../images/big.jpg"/>
+	<script>
+		$("#zoom_07").elevateZoom({
+		  zoomType				: "lens",
+		  lensShape : "round",
+		  lensSize    : 200
+		});
+	</script>
+</body>
+</html>

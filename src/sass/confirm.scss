@@ -156,6 +156,126 @@ main{
 						}
 					}
 				}
+				.addres{
+					width: 1000px;
+					.shoujianren{
+						width: 1000px;
+						height: 36px;
+						background-color: #efeeee;
+						color: #9c9c9c;
+						font-size: 12px;
+						display: flex;
+						align-items: center;
+						h3{
+							color: #404040;
+							padding-left: 10px;
+						}
+						span{
+							padding-left: 10px;
+							color: #ff503f;
+						}
+						i{
+							padding-left: 10px;
+						}
+					}
+					.dizhi{
+						height: 30px;
+						margin: 15px 0;
+						color: #595959;
+						font-size: 12px;
+						span{
+							padding:0 10px;
+						}
+						input{
+							width: 850px;
+							height: 30px;
+							border: 1px solid #cdcdcd;
+							color: #9c9c9c;
+							outline: none; 
+						}
+					}
+					.totalxinxi{
+						width: 950px;
+						height: 90px;
+						display: flex;
+						justify-content: space-around;
+						flex-wrap: wrap;
+						color: #595959;
+						font-size: 12px;
+						.name{
+							width: 160px;
+							input{
+								width: 100px;
+								height: 30px;
+								border: 1px solid #cdcdcd;
+							}
+						}
+						.phone{
+							width: 150px;
+							input{
+								width: 100px;
+								height: 30px;
+								border: 1px solid #cdcdcd;
+
+							}
+						}
+						.shoujiandizhi{
+							width: 500px;
+							input{
+								width: 430px;
+								height: 30px;
+								border: 1px solid #cdcdcd;
+
+							}
+
+						}
+						.beizhu{
+							width: 900px;
+							height: 30px;
+							span{
+								width: 50px;
+							}
+							input{
+								width: 832px;
+								height: 30px;
+								border: 1px solid #cdcdcd;
+
+							}
+
+						}
+					}
+					.totalmoney{
+						width: 820px;
+						height: 50px;
+						margin: 0 auto;
+						display: flex;
+						justify-content: flex-end;
+						align-items: center;
+						.fanhui{
+							padding:5px; 
+							background-color: #e4393c;
+							
+							font-size: 18px;
+							cursor: pointer;
+							margin-right:50px;
+							a{color: white;}
+						}
+						.sum{
+							padding:0 20px;
+							color: #cdcdcd;
+							span{
+								color: #e4393c;
+							}
+						}
+						.paytotal{
+							padding:5px; 
+							background-color: #e4393c;
+							color: white;
+							font-size: 18px;
+							cursor: pointer;
+						}
+					}
+				}
 			}
 		}	
 	}

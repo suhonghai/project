@@ -1,5 +1,5 @@
 require(["config"], function(){
-	require(["jquery", "template", "cookie", "load"], function($, template){
+	require(["jquery", "template", "cookie", "load", "zoom"], function($, template, zoom){
 		$(function(){
 			$.cookie.json = true;
 			let data = $.cookie("prods");
@@ -9,7 +9,11 @@ require(["config"], function(){
 			$(".huohao").find("span").html(data[0].brand);
 		});
 		
-
+		$("#zoom_07").elevateZoom({
+					  zoomType				: "lens",
+					  lensShape : "round",
+					  lensSize    : 200
+					});
 		//点击加入进货单跳到购物车界面
 			$(function(){
 				$(".zom").delegate(".cart",'click',function(){

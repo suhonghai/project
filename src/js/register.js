@@ -29,7 +29,6 @@ require(["config"], function(){
 								//保存注册成功的用户信息到cookie中
 								$.cookie.json = true;//自动调用json.parse/json.stringfy
 								$.cookie("loginUser", data.res_body, {path:"/"});
-								console.log(1);
 								location = "/index.html";
 							}
 							else{
